@@ -42,12 +42,12 @@ button {
 
     <button class="btn btn-success" onclick="checkAnswer()">Check</button>
 
-    <p id="result" class="mt-3"></p>
-    <p>Score: <span id="score">0</span></p>
+    <p style="background-color: aliceblue;" id="result" class="mt-3"></p>
+    <p style="background-color: aliceblue;">Score: <span id="score">0</span></p>
 </div>
 
 <script>
-let words = Array.from({length: 100}, (_, i) => i.toString());
+let words = Array.from({length: 1000}, (_, i) => i.toString());
 let currentWord = "";
 let score = 0;
 
@@ -78,7 +78,7 @@ function playSpelling() {
 
 // verificar resposta
 function checkAnswer() {
-    let user = document.getElementById("input").value.toLowerCase();
+    let user = document.getElementById("finput").value.toLowerCase();
 
     if (user === currentWord) {
         document.getElementById("result").innerText = "✅ Correct!";
